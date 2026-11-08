@@ -1,0 +1,40 @@
+PASTA DE PRODUTOS DA RD CALCADOS
+================================
+
+Tudo que aparece na vitrine do site fica nesta pasta:
+
+  produtos.json  -> a lista de produtos (nome, preco, categoria, tamanhos...)
+  fotos/         -> as fotos dos produtos
+
+COMO ADICIONAR UM PRODUTO NOVO
+------------------------------
+1. Abra o arquivo produtos.json no GitHub e clique no lapis (editar).
+2. Copie uma linha inteira de um produto (de { ate }), cole logo abaixo
+   e coloque uma virgula no fim da linha de cima.
+3. Troque os dados da linha nova:
+     "nome"         nome do produto
+     "categoria"    Feminino, Masculino, Infantil, Camisas, Kits, Calcas...
+                    (se escrever uma categoria nova, ela aparece sozinha no menu)
+     "preco"        preco atual, com ponto: 129.90
+     "preco_antigo" preco riscado (opcional, apague o campo se nao tiver)
+     "destaque"     Mais vendido, Lancamento ou Promocao (opcional)
+     "tamanhos"     os tamanhos: ["38","40","42"] ou ["P","M","G"]
+     "cores"        as cores (opcional): ["Preto","Branco"]
+     "foto"         nome do arquivo da foto: "tenis-azul.jpg"
+4. Clique em "Commit changes". Em cerca de 1 minuto o site atualiza.
+
+ATENCAO: use sempre aspas retas " e nao esqueca as virgulas entre os produtos.
+A ultima linha da lista NAO leva virgula no fim.
+
+COMO COLOCAR OU TROCAR A FOTO
+-----------------------------
+1. Entre na pasta fotos, clique em "Add file" e depois "Upload files".
+2. Envie a foto (de preferencia quadrada, formato .jpg, nome sem espaco
+   e sem acento, ex.: tenis-azul.jpg).
+3. No produtos.json, escreva o mesmo nome no campo "foto".
+   Para trocar, envie a nova foto com o mesmo nome ou mude o nome no campo.
+Se o campo "foto" ficar vazio, aparece um desenho no lugar.
+
+COMO TIRAR UM PRODUTO DO SITE
+-----------------------------
+Adicione "ativo": false na linha dele (ou apague a linha inteira).
