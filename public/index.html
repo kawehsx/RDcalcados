@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RD calçados | Seu passo, seu estilo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#faf8f4;--fg:#000;--mut:#6b675f;--card:#fff;--line:#e4dfd5;--beige:#e9e0d0;--gray:#d9d9d6;--ac:#000;--acf:#fff;
+--hd:"Sora","Helvetica Neue",Arial,sans-serif;--bd:"Manrope","Helvetica Neue",Arial,sans-serif;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0e0e;--fg:#f4f1ea;--mut:#a29d92;--card:#1a1a1a;--line:#2d2d2d;--beige:#3b3429;--gray:#3a3a3a;--ac:#f4f1ea;--acf:#000;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0e0e;--fg:#f4f1ea;--mut:#a29d92;--card:#1a1a1a;--line:#2d2d2d;--beige:#3b3429;--gray:#3a3a3a;--ac:#f4f1ea;--acf:#000;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.55 var(--bd);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:var(--hd);margin:0;line-height:1.1;letter-spacing:-.02em}
+button{font:inherit;color:inherit;cursor:pointer}a{color:inherit}
+:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:10px;height:60px}
+.logo{font:800 20px var(--hd);text-decoration:none;display:flex;align-items:center;gap:8px;margin-right:auto}
+.logo b{background:var(--ac);color:var(--acf);border-radius:8px;padding:2px 8px}
+.ib{border:1px solid var(--line);background:var(--card);border-radius:999px;height:40px;min-width:40px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-weight:700}
+nav.links{display:none;gap:18px;font-weight:500}nav.links a{text-decoration:none;color:var(--mut)}nav.links a:hover{color:var(--fg)}
+@media(min-width:780px){nav.links{display:flex}}
+.hero{padding:44px 0 36px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.mono{position:absolute;right:-30px;top:-10px;font:800 min(62vw,420px)/1 var(--hd);color:transparent;-webkit-text-stroke:2px var(--line);user-select:none;animation:float 7s ease-in-out infinite}
+.blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.7;animation:float 9s ease-in-out infinite}
+.b1{width:220px;height:220px;background:var(--beige);left:-60px;bottom:-40px}.b2{width:160px;height:160px;background:var(--gray);right:20%;bottom:10px;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-16px)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hero h1,.hero p,.hero .cta{animation:rise .8s both}.hero p{animation-delay:.15s}.hero .cta{animation-delay:.3s}
+.hero h1{font-size:clamp(40px,9vw,84px);max-width:11ch}
+.hero p{max-width:34ch;color:var(--mut);font-size:18px;margin:18px 0 24px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{border:2px solid var(--ac);background:var(--ac);color:var(--acf);border-radius:999px;padding:12px 22px;font-weight:700;text-decoration:none;display:inline-block}
+.btn.o{background:transparent;color:var(--fg)}
+.info{background:var(--beige);padding:14px 0;font-size:14px}.info .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 14px}
+@media(min-width:780px){.info .wrap{grid-template-columns:repeat(4,1fr)}}
+.brands{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;padding:26px 0;font:800 20px var(--hd);color:var(--mut)}
+section{padding:36px 0}h2{font-size:clamp(26px,5vw,38px);margin-bottom:6px}.sub{color:var(--mut);margin:0 0 20px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 14px;font-weight:500}.chip[aria-pressed="true"]{background:var(--ac);color:var(--acf);border-color:var(--ac)}
+.tools input,.tools select{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:12px;padding:10px 12px;font:inherit;flex:1;min-width:150px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}@media(min-width:780px){.grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-align:left;padding:0}
+.ph{aspect-ratio:1;background:linear-gradient(135deg,var(--beige),var(--gray));display:grid;place-items:center;font-size:60px;position:relative}
+.tag{position:absolute;left:8px;top:8px;background:var(--ac);color:var(--acf);font:700 12px var(--bd);border-radius:999px;padding:3px 10px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cb{padding:12px}.cb h3{font-size:15px;font-family:var(--bd);font-weight:700;letter-spacing:0}.pr{font:800 18px var(--hd);margin-top:4px}.pr s{font:400 13px var(--bd);color:var(--mut);margin-left:6px}
+.par{font-size:13px;color:var(--mut)}.empty{grid-column:1/-1;color:var(--mut)}
+.two{display:grid;gap:24px}@media(min-width:780px){.two{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left}.scroll{overflow-x:auto}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+details{border-bottom:1px solid var(--line);padding:12px 0}summary{font-weight:700;cursor:pointer}details p{margin:8px 0 0;color:var(--mut)}
+.news{background:var(--ac);color:var(--acf);border-radius:20px;padding:28px;text-align:center}.news .btn{background:var(--acf);color:var(--ac);border-color:var(--acf)}
+footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mut);font-size:14px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;background:#25d366;color:#000;border-radius:999px;padding:13px 18px;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40;display:none}.ov.on{display:block}
+.pan{position:absolute;background:var(--bg);color:var(--fg);padding:20px;overflow:auto;animation:rise .25s both}
+.drawer .pan{right:0;top:0;bottom:0;width:min(420px,100%)}.modal .pan{left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,92%);max-height:88%;border-radius:20px;animation:none}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 14px}.opt{border:1px solid var(--line);background:var(--card);border-radius:10px;min-width:44px;padding:8px 12px}.opt[aria-pressed="true"]{background:var(--ac);color:var(--acf)}
+.li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.qty button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--card)}
+.x{float:right}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#topo"><b>RD</b>calçados</a>
+<nav class="links" aria-label="Seções"><a href="#produtos">Produtos</a><a href="#tamanhos">Tamanhos</a><a href="#trocas">Trocas</a><a href="#loja">Nossa loja</a></nav>
+<button class="ib" id="tema" aria-label="Alternar tema claro e escuro">◐</button>
+<button class="ib" id="abrirCarrinho" aria-label="Abrir carrinho">Carrinho <span id="qtd">0</span></button>
+</div></header>
 
+<main id="topo">
+<div class="hero"><div class="mono" aria-hidden="true">RD</div><div class="blob b1"></div><div class="blob b2"></div>
+<div class="wrap"><h1>Seu passo. Seu estilo.</h1><p>Calçados e roupas das melhores marcas, com atendimento de verdade e envio para todo o Brasil.</p>
+<div class="cta"><a class="btn" href="#produtos">Ver produtos</a><a class="btn o" id="waHero" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></div>
+
+<div class="info"><div class="wrap"><span>Entrega em todo o Brasil</span><span>Região em até 24 horas</span><span>Pix, cartão e parcelado</span><span>Retire na loja</span></div></div>
+<div class="wrap brands" aria-label="Marcas"><span>Nike</span><span>Adidas</span><span>Mizuno</span><span>Puma</span><span>Olympikus</span></div>
+
+<section id="produtos"><div class="wrap">
+<h2>Produtos</h2><p class="sub">Os mais pedidos da RD. Escolha, monte o carrinho e finalize no WhatsApp.</p>
+<div class="tools" id="cats" role="group" aria-label="Categorias"></div>
+<div class="tools"><input id="busca" type="search" placeholder="Buscar produto" aria-label="Buscar produto"><select id="ordem" aria-label="Ordenar"><option value="">Ordenar</option><option value="m">Menor preço</option><option value="M">Maior preço</option></select><select id="sel" aria-label="Destaques"><option value="">Todos os destaques</option><option value="Mais vendido">Mais vendidos</option><option value="Promoção">Promoções</option><option value="Lançamento">Lançamentos</option></select></div>
+<div class="grid" id="grade"></div>
+</div></section>
+
+<section id="tamanhos"><div class="wrap two">
+<div><h2>Guia de tamanhos</h2><p class="sub">Meça o pé apoiado no chão, do calcanhar ao dedão, e confira a tabela.</p>
+<div class="scroll"><table><tr><th>Calçado (BR)</th><th>Pé (cm)</th></tr><tr><td>35</td><td>23,0</td></tr><tr><td>37</td><td>24,5</td></tr><tr><td>39</td><td>26,0</td></tr><tr><td>41</td><td>27,5</td></tr><tr><td>43</td><td>29,0</td></tr></table></div></div>
+<div><h2 style="font-size:26px">Roupas</h2><p class="sub">Em dúvida? Chame no WhatsApp que a gente ajuda a escolher.</p>
+<div class="scroll"><table><tr><th>Tam.</th><th>Busto/tórax</th><th>Cintura</th></tr><tr><td>P</td><td>86 a 92</td><td>66 a 72</td></tr><tr><td>M</td><td>92 a 98</td><td>72 a 78</td></tr><tr><td>G</td><td>98 a 106</td><td>78 a 86</td></tr><tr><td>GG</td><td>106 a 114</td><td>86 a 94</td></tr></table></div></div>
+</div></section>
+
+<section><div class="wrap"><h2>Quem já comprou</h2><p class="sub">Depoimentos de exemplo, troque pelos reais quando tiver.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+<div class="quote">“Atendimento top e o tênis chegou rápido. Recomendo.”<br><b>Ana P.</b></div>
+<div class="quote">“Consegui desconto na conversa e o calçado é impecável.”<br><b>Carlos M.</b></div>
+<div class="quote">“Comprei para meu filho, serviu certinho e veio bem embalado.”<br><b>Juliana R.</b></div></div></div></section>
+
+<section id="trocas"><div class="wrap"><h2>Perguntas frequentes</h2><p class="sub">&nbsp;</p>
+<details><summary>Como comprar?</summary><p>Adicione os produtos ao carrinho e toque em “Finalizar no WhatsApp”. Nosso atendente confirma o pedido com você.</p></details>
+<details><summary>Quais as formas de pagamento?</summary><p>Pix, cartão e parcelamento. Dinheiro apenas para clientes da cidade.</p></details>
+<details><summary>Qual o prazo de entrega?</summary><p>Enviamos para todo o Brasil. Na região, entregamos em menos de 24 horas. Também dá para retirar na loja.</p></details>
+<details><summary>Posso trocar ou devolver?</summary><p>Sim. Se o produto não servir ou tiver defeito, chame no WhatsApp em até 7 dias após o recebimento, com o produto sem uso e na embalagem.</p></details>
+</div></section>
+
+<section id="loja"><div class="wrap two">
+<div><h2>Nossa loja</h2><p class="sub">Venha experimentar e levar na hora.</p>
+<p><b>Avenida Presidente Vargas, 1039</b><br>Presidente Epitácio, SP<br>Horário: confirme pelo WhatsApp.</p>
+<div class="cta"><a class="btn" id="mapa" href="#" target="_blank" rel="noopener">Ver no mapa</a><a class="btn o" href="https://instagram.com/rdcalcados2026" target="_blank" rel="noopener">Instagram @rdcalcados2026</a></div></div>
+<div class="news"><h2 style="font-size:26px">Receba novidades</h2><p>Promoções e lançamentos direto no seu WhatsApp.</p><a class="btn" id="waNews" href="#" target="_blank" rel="noopener">Quero receber</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">RD calçados. Presidente Epitácio, SP. WhatsApp (18) 98193-7176.</div></footer>
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">WhatsApp</a>
+
+<div class="ov modal" id="modal" role="dialog" aria-modal="true"><div class="pan" id="mp"></div></div>
+<div class="ov drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Carrinho"><div class="pan">
+<button class="ib x" id="fechar" aria-label="Fechar carrinho">Fechar</button><h2 style="font-size:26px">Seu carrinho</h2><div id="itens"></div>
+<div class="row"><input id="cup" placeholder="Cupom de desconto" aria-label="Cupom de desconto" style="flex:1;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:12px;padding:10px 12px;font:inherit"><button class="opt" id="aplicar">Aplicar</button></div><p class="par" id="cupmsg"></p><p style="font:800 20px var(--hd)" id="total"></p><a class="btn" id="fin" href="#" target="_blank" rel="noopener" style="width:100%;text-align:center">Finalizar no WhatsApp</a>
+<p class="par">Preço e frete confirmados na conversa. Combine desconto com nosso atendente.</p></div></div>
+
+<script>
+var FONE="5518981937176",R=function(n){return "R$ "+n.toFixed(2).replace(".",",")};
+var P=[],CUPONS=[],CORES=["Preto","Branco","Bege","Cinza"],CATS=["Todos"],cupom=null;
+var cat="Todos",cart=[],cur=null,sz="",cr="";
+function $(i){return document.getElementById(i)}
+function wa(t){return "https://wa.me/"+FONE+"?text="+encodeURIComponent(t)}
+try{cart=JSON.parse(localStorage.getItem("rdcart")||"[]")}catch(e){cart=[]}
+function save(){try{localStorage.setItem("rdcart",JSON.stringify(cart))}catch(e){}}
+function chips(){$("cats").innerHTML=CATS.map(function(c){return '<button class="chip" aria-pressed="'+(c==cat)+'" data-c="'+c+'">'+c+'</button>'}).join("")}
+function grade(){var q=$("busca").value.toLowerCase(),o=$("ordem").value,s=$("sel").value;
+var l=P.filter(function(x){return(cat=="Todos"||x.c==cat)&&x.n.toLowerCase().indexOf(q)>-1&&(!s||x.t==s)});
+if(o=="m")l.sort(function(a,b){return a.p-b.p});if(o=="M")l.sort(function(a,b){return b.p-a.p});
+$("grade").innerHTML=l.length?l.map(function(x){return '<button class="card" data-id="'+x.id+'"><div class="ph">'+(x.t?'<span class="tag">'+x.t+'</span>':'')+(x.f?'<img src="'+x.f+'" alt="'+x.n+'" loading="lazy" onerror="this.remove()">':'')+x.e+'</div><div class="cb"><h3>'+x.n+'</h3><div class="pr">'+R(x.p)+(x.o?'<s>'+R(x.o)+'</s>':'')+'</div><div class="par">ou 3x de '+R(x.p/3)+'</div></div></button>'}).join(""):'<p class="empty">Nenhum produto encontrado. Tente outra busca ou chame no WhatsApp.</p>'}
+function abrir(id){cur=P.filter(function(x){return x.id==id})[0];sz=cur.s[1]||cur.s[0];cr=(cur.k||CORES)[0];mod()}
+function mod(){var h='<button class="ib x" data-z="1" aria-label="Fechar">Fechar</button><div class="ph" style="border-radius:14px;margin-bottom:12px">'+(cur.f?'<img src="'+cur.f+'" alt="" onerror="this.remove()">':'')+cur.e+'</div><h2 style="font-size:24px">'+cur.n+'</h2><div class="pr">'+R(cur.p)+'</div><p class="par">Tamanho:</p><div class="row">'+cur.s.map(function(s){return '<button class="opt" data-s="'+s+'" aria-pressed="'+(s==sz)+'">'+s+'</button>'}).join("")+'</div><p class="par">Cor:</p><div class="row">'+(cur.k||CORES).map(function(c){return '<button class="opt" data-k="'+c+'" aria-pressed="'+(c==cr)+'">'+c+'</button>'}).join("")+'</div><button class="btn" data-add="1" style="width:100%">Adicionar ao carrinho</button>';$("mp").innerHTML=h}
+function desenha(){var n=0,t=0;cart.forEach(function(i){n+=i.q;t+=i.q*i.p});$("qtd").textContent=n;
+$("itens").innerHTML=cart.length?cart.map(function(i,k){return '<div class="li"><div><b>'+i.n+'</b><div class="par">Tam. '+i.s+', '+i.c+'</div><div class="qty"><button data-m="'+k+'" aria-label="Diminuir">-</button> '+i.q+' <button data-pl="'+k+'" aria-label="Aumentar">+</button></div></div><b>'+R(i.p*i.q)+'</b></div>'}).join(""):'<p class="par">Seu carrinho está vazio. Escolha um produto para começar.</p>';
+var d=0;if(cupom&&t>0){d=cupom.tipo=="percentual"?t*cupom.valor/100:Math.min(cupom.valor,t)}$("total").textContent="Total: "+R(t-d)+(d?" (cupom "+cupom.codigo+": -"+R(d)+")":"");
+var m="Olá! Quero finalizar meu pedido na RD calçados:\n"+cart.map(function(i){return "- "+i.q+"x "+i.n+" (tam. "+i.s+", "+i.c+") "+R(i.p*i.q)}).join("\n")+(d?"\nCupom "+cupom.codigo+": -"+R(d):"")+"\nTotal: "+R(t-d);
+$("fin").href=cart.length?wa(m):wa("Olá! Gostaria de ver os produtos da RD calçados.");save()}
+document.addEventListener("click",function(e){var t=e.target.closest("button,.ov");if(!t)return;var d=t.dataset;
+if(d.c){cat=d.c;chips();grade()}
+else if(d.id)abrir(d.id)
+else if(d.s){sz=d.s;mod()}else if(d.k){cr=d.k;mod()}
+else if(d.add){var f=cart.filter(function(i){return i.id==cur.id&&i.s==sz&&i.c==cr})[0];if(f)f.q++;else cart.push({id:cur.id,n:cur.n,p:cur.p,s:sz,c:cr,q:1});$("modal").classList.remove("on");desenha();$("drawer").classList.add("on")}
+else if(d.z)$("modal").classList.remove("on")
+else if(d.pl){cart[d.pl].q++;desenha()}
+else if(d.m){if(--cart[d.m].q<1)cart.splice(d.m,1);desenha()}
+if(d.id)$("modal").classList.add("on")});
+$("modal").addEventListener("click",function(e){if(e.target===this)this.classList.remove("on")});
+$("drawer").addEventListener("click",function(e){if(e.target===this)this.classList.remove("on")});
+$("abrirCarrinho").onclick=function(){$("drawer").classList.add("on")};$("fechar").onclick=function(){$("drawer").classList.remove("on")};
+$("aplicar").onclick=function(){var c=$("cup").value.trim().toUpperCase(),hoje=new Date(),f=CUPONS.filter(function(x){return x.ativo!==false&&String(x.codigo).toUpperCase()==c&&(!x.valido_ate||new Date(x.valido_ate+"T23:59:59")>=hoje)})[0];cupom=f||null;$("cupmsg").textContent=f?"Cupom aplicado.":(c?"Cupom inválido ou vencido.":"");desenha()};$("busca").oninput=grade;$("ordem").onchange=grade;$("sel").onchange=grade;
+$("tema").onclick=function(){var r=document.documentElement,d=r.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");r.dataset.theme=d=="dark"?"light":"dark"};
+var hi="Olá! Vim pelo site da RD calçados.";["waHero","waFloat"].forEach(function(i){$(i).href=wa(hi)});
+$("waNews").href=wa("Olá! Quero receber novidades e promoções da RD calçados.");
+$("mapa").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Avenida Presidente Vargas 1039, Presidente Epitácio, SP");
+function jl(u){return fetch(u).then(function(r){return r.json()})}
+function carregar(){return jl("produtos.json").then(function(l){P=l.filter(function(x){return x.ativo!==false}).map(function(x,i){return{id:x.id||i+1,n:x.nome,c:x.categoria,p:x.preco,o:x.preco_antigo,t:x.destaque,e:x.emoji||"👟",f:x.foto,s:x.tamanhos||["Único"],k:x.cores}});CATS=["Todos"].concat(P.map(function(x){return x.c}).filter(function(c,i,a){return a.indexOf(c)==i}))}).catch(function(){})}
+Promise.all([carregar(),jl("cupons.json").then(function(l){CUPONS=l}).catch(function(){})]).then(function(){chips();grade()});desenha();
+</script>
+</body>
+</html>
