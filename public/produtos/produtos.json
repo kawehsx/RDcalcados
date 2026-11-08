@@ -1,8 +1,8 @@
 [
-  {"id":1,"nome":"Tênis casual branco","categoria":"Tênis","preco":129.90,"preco_antigo":159.90,"destaque":"Promoção","foto":"tenisbranco.png","tamanhos":["38","39","40","41","42","43"]},
-  {"id":2,"nome":"Tênis marrom","categoria":"Tênis","preco":110.00,"foto":"tenismarrom.PNG","tamanhos":["34","35","36","37","38","39"]},
-  {"id":3,"nome":"Tênis preto","categoria":"Tênis","preco":120.00,"preco_antigo":140.00,"destaque":"Promoção","foto":"tenispreto.PNG","tamanhos":["38","39","40","41","42","43"]},
-  {"id":4,"nome":"Camisa dri-fit Brasil","categoria":"Camisas","preco":100.00,"foto":"blusabrasil.PNG","tamanhos":["P","M","G"]},
-  {"id":5,"nome":"Chinelo Lacoste","categoria":"Chinelos","preco":120.00,"destaque":"Mais vendido","foto":"chinelolacoste.PNG","tamanhos":["38","39","40","41"]},
-  {"id":6,"nome":"Shorts","categoria":"Shorts","preco":99.90,"destaque":"Promoção","foto":"shorts.PNG","tamanhos":["P","M","G"]}
+  {"id":1,"nome":"Tênis casual branco","categoria":"Tênis","preco":129.90,"preco_antigo":159.90,"destaque":"Promoção","foto":"tenisbranco.png","tamanhos":["38","39","40","41","42","43"],"cores":["Branco"]},
+  {"id":2,"nome":"Tênis marrom","categoria":"Tênis","preco":110.00,"foto":"tenismarrom.PNG","tamanhos":["34","35","36","37","38","39"],"cores":["Marrom"]},
+  {"id":3,"nome":"Tênis preto","categoria":"Tênis","preco":120.00,"preco_antigo":140.00,"destaque":"Promoção","foto":"tenispreto.PNG","tamanhos":["38","39","40","41","42","43"],"cores":["Preto"]},
+  {"id":4,"nome":"Camisa dri-fit Brasil","categoria":"Camisas","preco":100.00,"foto":"blusabrasil.PNG","tamanhos":["P","M","G"]"cores":["Preto","branco","azul"]},
+  {"id":5,"nome":"Chinelo Lacoste","categoria":"Chinelos","preco":120.00,"destaque":"Mais vendido","foto":"chinelolacoste.PNG","tamanhos":["38","39","40","41"],"cores":["Preto","Branco"]},
+  {"id":6,"nome":"Shorts","categoria":"Shorts","preco":99.90,"destaque":"Promoção","foto":"shorts.PNG","tamanhos":["P","M","G"],"cores":["Diverso"]}
 ]
