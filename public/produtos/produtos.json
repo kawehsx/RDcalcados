@@ -4,5 +4,5 @@
   {"id":3,"nome":"tenis","categoria":"Tenis","preco":120.0,"preco_antigo":140.0,"destaque":"Promoção","foto":"tenispreto.PNG","tamanhos":["38","39","40","41","42","43"]},
   {"id":4,"nome":"Camisa dri-fit Brasil","categoria":"Camisas","preco":100.0,"preco_antigo":,"destaque":"","foto":"blusabrasil.PNG","tamanhos":["P","M","G"]},
   {"id":5,"nome":"chinelo lacoste","categoria":"Chinelos","preco":120.0,"preco_antigo":,"destaque":"Mais vendido","foto":"chinelolacoste.PNG","tamanhos":["38","39","40","41"]},
-  {"id":5,"nome":"shorts","categoria":"shorts","preco":99.90,"preco_antigo":,"destaque":"Promoção","foto":"shorts.PNG","tamanhos":["P","M","G"]}
+  {"id":6,"nome":"shorts","categoria":"shorts","preco":99.90,"preco_antigo":,"destaque":"Promoção","foto":"shorts.PNG","tamanhos":["P","M","G"]}
 ]
