@@ -1,0 +1,10 @@
+[
+  {"id":1,"nome":"Tênis esportivo masculino","categoria":"Masculino","preco":189.90,"preco_antigo":229.90,"destaque":"Mais vendido","emoji":"👟","foto":"","tamanhos":["38","40","42","44"],"cores":["Preto","Branco","Cinza"]},
+  {"id":2,"nome":"Tênis casual feminino","categoria":"Feminino","preco":159.90,"destaque":"Mais vendido","emoji":"👟","foto":"","tamanhos":["34","36","38","40"]},
+  {"id":3,"nome":"Tênis infantil","categoria":"Infantil","preco":99.90,"destaque":"Mais vendido","emoji":"👟","foto":"","tamanhos":["24","26","28","30","32"]},
+  {"id":4,"nome":"Kit 3 camisetas básicas","categoria":"Kits","preco":119.90,"preco_antigo":149.90,"destaque":"Mais vendido","emoji":"👕","foto":"","tamanhos":["P","M","G","GG"]},
+  {"id":5,"nome":"Sandália feminina conforto","categoria":"Feminino","preco":89.90,"destaque":"Lançamento","emoji":"🩴","foto":"","tamanhos":["34","36","38","40"]},
+  {"id":6,"nome":"Calça jogger masculina","categoria":"Calças","preco":129.90,"preco_antigo":159.90,"destaque":"Promoção","emoji":"👖","foto":"","tamanhos":["P","M","G","GG"]},
+  {"id":7,"nome":"Vestido midi casual","categoria":"Vestidos","preco":139.90,"destaque":"Lançamento","emoji":"👗","foto":"","tamanhos":["P","M","G"]},
+  {"id":8,"nome":"Camisa polo masculina","categoria":"Camisas","preco":79.90,"emoji":"👔","foto":"","tamanhos":["P","M","G","GG"],"ativo":true}
+]
