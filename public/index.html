@@ -125,12 +125,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 90px;color:var(--mut);fon
 <div class="ov modal" id="modal" role="dialog" aria-modal="true"><div class="pan" id="mp"></div></div>
 <div class="ov drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Carrinho"><div class="pan">
 <button class="ib x" id="fechar" aria-label="Fechar carrinho">Fechar</button><h2 style="font-size:26px">Seu carrinho</h2><div id="itens"></div>
-<div class="row"><input id="cup" placeholder="Cupom de desconto" aria-label="Cupom de desconto" style="flex:1;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:12px;padding:10px 12px;font:inherit"><button class="opt" id="aplicar">Aplicar</button></div><p class="par" id="cupmsg"></p><p style="font:800 20px var(--hd)" id="total"></p><a class="btn" id="fin" href="#" target="_blank" rel="noopener" style="width:100%;text-align:center">Finalizar no WhatsApp</a>
+<p style="font:800 20px var(--hd)" id="total"></p><a class="btn" id="fin" href="#" target="_blank" rel="noopener" style="width:100%;text-align:center">Finalizar no WhatsApp</a>
 <p class="par">Preço e frete confirmados na conversa. Combine desconto com nosso atendente.</p></div></div>
 
 <script>
 var FONE="5518981937176",R=function(n){return "R$ "+n.toFixed(2).replace(".",",")};
-var P=[],CUPONS=[],CORES=["Preto","Branco","Bege","Cinza"],CATS=["Todos"],cupom=null;
+var P=[],CORES=["Preto","Branco","Bege","Cinza"],CATS=["Todos"];
 var cat="Todos",cart=[],cur=null,sz="",cr="";
 function $(i){return document.getElementById(i)}
 function wa(t){return "https://wa.me/"+FONE+"?text="+encodeURIComponent(t)}
@@ -145,8 +145,8 @@ function abrir(id){cur=P.filter(function(x){return x.id==id})[0];sz=cur.s[1]||cu
 function mod(){var h='<button class="ib x" data-z="1" aria-label="Fechar">Fechar</button><div class="ph" style="border-radius:14px;margin-bottom:12px">'+(cur.f?'<img src="'+cur.f+'" alt="" onerror="this.remove()">':'')+cur.e+'</div><h2 style="font-size:24px">'+cur.n+'</h2><div class="pr">'+R(cur.p)+'</div><p class="par">Tamanho:</p><div class="row">'+cur.s.map(function(s){return '<button class="opt" data-s="'+s+'" aria-pressed="'+(s==sz)+'">'+s+'</button>'}).join("")+'</div><p class="par">Cor:</p><div class="row">'+(cur.k||CORES).map(function(c){return '<button class="opt" data-k="'+c+'" aria-pressed="'+(c==cr)+'">'+c+'</button>'}).join("")+'</div><button class="btn" data-add="1" style="width:100%">Adicionar ao carrinho</button>';$("mp").innerHTML=h}
 function desenha(){var n=0,t=0;cart.forEach(function(i){n+=i.q;t+=i.q*i.p});$("qtd").textContent=n;
 $("itens").innerHTML=cart.length?cart.map(function(i,k){return '<div class="li"><div><b>'+i.n+'</b><div class="par">Tam. '+i.s+', '+i.c+'</div><div class="qty"><button data-m="'+k+'" aria-label="Diminuir">-</button> '+i.q+' <button data-pl="'+k+'" aria-label="Aumentar">+</button></div></div><b>'+R(i.p*i.q)+'</b></div>'}).join(""):'<p class="par">Seu carrinho está vazio. Escolha um produto para começar.</p>';
-var d=0;if(cupom&&t>0){d=cupom.tipo=="percentual"?t*cupom.valor/100:Math.min(cupom.valor,t)}$("total").textContent="Total: "+R(t-d)+(d?" (cupom "+cupom.codigo+": -"+R(d)+")":"");
-var m="Olá! Quero finalizar meu pedido na RD calçados:\n"+cart.map(function(i){return "- "+i.q+"x "+i.n+" (tam. "+i.s+", "+i.c+") "+R(i.p*i.q)}).join("\n")+(d?"\nCupom "+cupom.codigo+": -"+R(d):"")+"\nTotal: "+R(t-d);
+$("total").textContent="Total: "+R(t);
+var m="Olá! Quero finalizar meu pedido na RD calçados:\n"+cart.map(function(i){return "- "+i.q+"x "+i.n+" (tam. "+i.s+", "+i.c+") "+R(i.p*i.q)}).join("\n")+"\nTotal: "+R(t);
 $("fin").href=cart.length?wa(m):wa("Olá! Gostaria de ver os produtos da RD calçados.");save()}
 document.addEventListener("click",function(e){var t=e.target.closest("button,.ov");if(!t)return;var d=t.dataset;
 if(d.c){cat=d.c;chips();grade()}
@@ -160,14 +160,14 @@ if(d.id)$("modal").classList.add("on")});
 $("modal").addEventListener("click",function(e){if(e.target===this)this.classList.remove("on")});
 $("drawer").addEventListener("click",function(e){if(e.target===this)this.classList.remove("on")});
 $("abrirCarrinho").onclick=function(){$("drawer").classList.add("on")};$("fechar").onclick=function(){$("drawer").classList.remove("on")};
-$("aplicar").onclick=function(){var c=$("cup").value.trim().toUpperCase(),hoje=new Date(),f=CUPONS.filter(function(x){return x.ativo!==false&&String(x.codigo).toUpperCase()==c&&(!x.valido_ate||new Date(x.valido_ate+"T23:59:59")>=hoje)})[0];cupom=f||null;$("cupmsg").textContent=f?"Cupom aplicado.":(c?"Cupom inválido ou vencido.":"");desenha()};$("busca").oninput=grade;$("ordem").onchange=grade;$("sel").onchange=grade;
+$("busca").oninput=grade;$("ordem").onchange=grade;$("sel").onchange=grade;
 $("tema").onclick=function(){var r=document.documentElement,d=r.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");r.dataset.theme=d=="dark"?"light":"dark"};
 var hi="Olá! Vim pelo site da RD calçados.";["waHero","waFloat"].forEach(function(i){$(i).href=wa(hi)});
 $("waNews").href=wa("Olá! Quero receber novidades e promoções da RD calçados.");
 $("mapa").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Avenida Presidente Vargas 1039, Presidente Epitácio, SP");
 function jl(u){return fetch(u).then(function(r){return r.json()})}
-function carregar(){return jl("produtos.json").then(function(l){P=l.filter(function(x){return x.ativo!==false}).map(function(x,i){return{id:x.id||i+1,n:x.nome,c:x.categoria,p:x.preco,o:x.preco_antigo,t:x.destaque,e:x.emoji||"👟",f:x.foto,s:x.tamanhos||["Único"],k:x.cores}});CATS=["Todos"].concat(P.map(function(x){return x.c}).filter(function(c,i,a){return a.indexOf(c)==i}))}).catch(function(){})}
-Promise.all([carregar(),jl("cupons.json").then(function(l){CUPONS=l}).catch(function(){})]).then(function(){chips();grade()});desenha();
+function carregar(){return jl("produtos/produtos.json").then(function(l){P=l.filter(function(x){return x.ativo!==false}).map(function(x,i){return{id:x.id||i+1,n:x.nome,c:x.categoria,p:x.preco,o:x.preco_antigo,t:x.destaque,e:x.emoji||"👟",f:x.foto?"produtos/fotos/"+x.foto:"",s:x.tamanhos||["Único"],k:x.cores}});CATS=["Todos"].concat(P.map(function(x){return x.c}).filter(function(c,i,a){return a.indexOf(c)==i}))}).catch(function(){})}
+carregar().then(function(){chips();grade()});desenha();
 </script>
 </body>
 </html>
